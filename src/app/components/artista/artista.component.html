@@ -1,0 +1,48 @@
+<div class="row" *ngIf="!loadingArtist">
+    <div class="col-2">
+            <img class="card-img-top" [src]="artista.images | noimage" alt="Card image cap">
+    </div>
+    <div class="col">
+        <h3 class="color">{{artista.name}}</h3>
+        <p>
+            <a [href]="artista.external_urls.spotify">Ir al sitio web de {{artista.name}}</a>
+        </p>
+    </div>
+    <div class="col-4 text-right">
+        <button routerLink="/search " class="btn btn-outline-danger">Regeresar</button>
+    </div>
+</div>
+<div class="col">
+    <table class="table mt-5 color">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Albun</th>
+                <th>Canción</th>
+                <th>Vista previa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let top of topTrack">
+                <td>
+                    <img [src]="top.album.images | noimage" class="img">
+                </td>
+                <td>{{top.album.name}}</td>
+                <td>{{top.name}}</td>
+                <td>
+                    <audio [src]="top.preview_url" controls></audio>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- <div> -->
+    <!-- <table class="table">
+        <thead class="table-dark"></thead>
+    </table>
+    <tbody *ngFor="let top of topTrack">{{top.name}}</tbody> -->
+    <!-- <ul>
+        <li *ngFor="let top of topTrack">{{top.name}}</li>
+    </ul> -->
+<!-- </div> -->
+
