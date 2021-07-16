@@ -11,7 +11,6 @@ export class ArtistaComponent {
   loadingArtist:boolean = true;
   topTrack:any[] = [];
 
-  
   constructor(private router:ActivatedRoute, private spotify:SpotifyService) {
     this.loadingArtist = true;
     this.router.params.subscribe( params => {

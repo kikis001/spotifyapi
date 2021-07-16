@@ -22,9 +22,4 @@ export class SearchComponent {
       console.log(data);
     })
   }
-
-  // prueba(valor:string){
-  //   console.log(valor)
-  // }
-
 }

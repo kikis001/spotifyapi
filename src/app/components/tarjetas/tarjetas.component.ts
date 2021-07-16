@@ -7,7 +7,6 @@ import { Router } from '@angular/router'
   styleUrls: ['./tarjetas.component.css']
 })
 export class TarjetasComponent {
-
   @Input() items:any[]
   
   constructor(private router:Router) { }
@@ -20,6 +19,5 @@ export class TarjetasComponent {
       artistaId = item.artists[0].id
     }
     this.router.navigate(['/artist', artistaId])
-  }
-  
+  } 
 }
