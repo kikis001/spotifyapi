@@ -1,8 +1,9 @@
 # SpotifyAPI
 
+# About of the project
 Project using the [spotify API](https://developer.spotify.com/)
 
-
+# Angular
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
 ## Development server
